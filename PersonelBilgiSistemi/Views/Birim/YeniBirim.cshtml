@@ -1,0 +1,22 @@
+﻿@model PersonelBilgiSistemi.Models.Birim
+@{
+    ViewData["Title"] = "YeniBirim";
+    Layout = "~/Views/Shared/_GenelLayout.cshtml";
+}
+
+<br />
+
+<br />
+<h4>Birim Ekle</h4>
+<br />
+<form class="form-group" method="post">
+    <b>Birim Adı </b>
+
+    @Html.TextBoxFor(x => x.BirimAdi , new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Birim Ekle</button>
+</form>
+
+
+
+

@@ -1,0 +1,23 @@
+﻿@model PersonelBilgiSistemi.Models.Birim
+@{
+    ViewData["Title"] = "BirimGetir";
+    Layout = "~/Views/Shared/_GenelLayout.cshtml";
+}
+<br />
+<br />
+<h4>Birim Güncelle</h4>
+<br />
+@using (Html.BeginForm("BirimGuncelle", "Birim", FormMethod.Post))
+{
+<b>Birim Id</b>
+
+    @Html.TextBoxFor(x => x.BirimId, new { @class = "form-control" })
+    <br />
+
+    <b>Depatman Adı </b>
+
+    @Html.TextBoxFor(x => x.BirimAdi, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Birim Güncelle</button>
+
+}

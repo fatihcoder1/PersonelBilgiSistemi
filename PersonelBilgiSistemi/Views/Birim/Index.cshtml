@@ -1,0 +1,30 @@
+﻿@using PersonelBilgiSistemi.Models
+@model List<Birim>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_GenelLayout.cshtml";
+}
+
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Birim Id</th>
+        <th>Birim</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.BirimId</td>
+            <td>@item.BirimAdi</td>
+            <td><a href="/Birim/BirimSil/?Id=@item.BirimId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Birim/BirimGetir/?Id=@item.BirimId" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Birim/BirimDetay/?Id=@item.BirimId" class="btn btn-outline-warning">Detaylar</a></td>
+        </tr>
+    }
+</table>
+<a href="/Birim/YeniBirim" class="btn btn-primary">Yeni Birim Ekle</a>
+
+
